@@ -5,9 +5,11 @@ noremap <F11> <Esc>:bp<CR>
 noremap <F12> <Esc>:bn<CR>
 
 set colorcolumn=80
+set tabstop=2
 set shiftwidth=2
-set softtabstop=2
 set expandtab
+set softtabstop=2
+set smarttab
 set backspace=indent,eol,start
 set showmatch
 set incsearch
@@ -28,6 +30,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'majutsushi/tagbar'
+Plugin 'vim-jp/vim-go-extra'
 
 call vundle#end()
 filetype plugin indent on
@@ -80,4 +83,9 @@ let g:tagbar_type_go = {
 " ListToggle
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
+
+" stuff for golang
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+autocmd FileType go setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType go setlocal noexpandtab
 
