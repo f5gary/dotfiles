@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE Debugger SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vsdebugger.dtd">
+<Debugger>
+	<Package
+		Name="GDB">
+		<Configuration
+			Path="/usr/bin/gdb"
+			Default="1"
+			Name="Standard GDB"
+			Standard="1"
+			Platform="LINUX"
+			Arguments=""/>
+		<Configuration
+			Path="/home/garyr/bin/gdb"
+			Default="0"
+			Name="RCM gdb"
+			Platform="LINUX"
+			Arguments=""/>
+	</Package>
+</Debugger>

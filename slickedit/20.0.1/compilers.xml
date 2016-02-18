@@ -1,0 +1,28 @@
+<!DOCTYPE Compilers SYSTEM "http://www.slickedit.com/dtd/vse/10.0/compilers.dtd">
+<Compilers Version="10.0">
+	<C_Configuration
+		Name="GCC-5-x86_64-linux-gnu"
+		Header="sysconfig/vsparser/g++-linux.h">
+		<Includes>
+			<Include Dir="/usr/include/c++/5/"/>
+			<Include Dir="/usr/lib/gcc/x86_64-linux-gnu/5/include/"/>
+			<Include Dir="/usr/include/"/>
+		</Includes>
+	</C_Configuration>
+	<C_Configuration
+		Name="CC-5-x86_64-linux-gnu"
+		Header="sysconfig/vsparser/g++-linux.h">
+		<Includes>
+			<Include Dir="/usr/include/c++/5/"/>
+			<Include Dir="/usr/lib/gcc/x86_64-linux-gnu/5/include/"/>
+			<Include Dir="/usr/include/"/>
+		</Includes>
+	</C_Configuration>
+	<C_Configuration
+		Name="Unix Includes"
+		Header="sysconfig/vsparser/g++-linux.h">
+		<Includes>
+			<Include Dir="/usr/include/"/>
+		</Includes>
+	</C_Configuration>
+</Compilers>

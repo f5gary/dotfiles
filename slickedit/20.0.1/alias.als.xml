@@ -1,0 +1,75 @@
+<profile>
+	<p n="filecomment">
+		<text>
+			/*******************************************************************
+			*
+			*    DESCRIPTION:%\c
+			*
+			*    AUTHOR:
+			*
+			*    HISTORY:
+			*
+			*    DATE:%\d
+			*
+			*******************************************************************/
+			%\l
+			/** include files **/
+			%\l
+			/** local definitions **/
+			%\l
+			/* default settings */
+			%\l
+			/** external functions **/
+			%\l
+			/** external data **/
+			%\l
+			/** internal functions **/
+			%\l
+			/** public data **/
+			%\l
+			/** private data **/
+			%\l
+			/** public functions **/
+			%\l
+			/** private functions **/
+			%\l
+		</text>
+	</p>
+	<p n="ma">
+		<text>
+			"%VSROOT%macros/
+		</text>
+	</p>
+	<p n="vs">
+		<text>
+			"%VSROOT%
+		</text>
+	</p>
+	<p n="functioncomment">
+		<params>
+			<param n="fname" default="" prompt="Function Name:"/>
+		</params>
+		<text>
+			%\L                /*
+			                 *Function Name:%(fname)
+			                 *
+			                 *Parameters:%\c
+			                 *
+			                 *Description:
+			                 *
+			                 *Returns:
+			                 *
+			                 */
+		</text>
+	</p>
+	<p n="config">
+		<text>
+			"%\M_config_path%
+		</text>
+	</p>
+	<p n="bin">
+		<text>
+			"%VSLICKBIN1%
+		</text>
+	</p>
+</profile>
