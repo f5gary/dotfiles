@@ -1,0 +1,49 @@
+[user]
+        email = garyr@f5.com
+#[core]
+#        excludesfile = "/home/garyr/.gitexcludes"
+
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+
+[color "diff"]
+        old = red bold
+        new = green bold
+
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
+
+#[diff]
+#        tool=vsdiff
+
+#[merge]
+#        tool=vsmerge
+
+#[difftool "vsdiff"]
+#        cmd = vsdiff "-r1" "$LOCAL" "$REMOTE"
+
+#[mergetool "vsmerge"]
+#       cmd = vsmerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+
+
+[mergealias "myvim"]
+   cmd = "vim -d -R -f \
+      -c \"tabe $MERGED\" -c \"set noro\" -c \"vert diffs $LOCAL\" \
+      -c \"tabe $REMOTE\" -c \"vert diffs $BASE\" \
+      -c tabfir -c \"diffs $MERGED\" -c \"set noro\" -c \"wincmd J\" \
+      \"$LOCAL\" \"$BASE\" \"$REMOTE\""
+
+#vsdiff = !GIT_PAGER= GIT_EXTERNAL_DIFF=git_diff_wrapper git diff
+
+#[alias]
+#vsdiff = !GIT_PAGER= GIT_EXTERNAL_DIFF=/home/ashok/bin/git_diff_wrapper git diff
+
