@@ -2,5 +2,8 @@ slickedit/20.0.1/logs/
 slickedit/20.0.1/tagfiles/
 slickedit/20.0.1/vrestore.slk
 slickedit/20.0.1/vsdelta/
+slickedit/20.0.1/diffmap.ini
+slickedit/20.0.1/diffsession.xml
 vim/bundle/
+vim/.netrwhist
 vim/.ycm_extra_conf.pyc
