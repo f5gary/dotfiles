@@ -62,3 +62,6 @@
 #[alias]
 #vsdiff = !GIT_PAGER= GIT_EXTERNAL_DIFF=/home/ashok/bin/git_diff_wrapper git diff
 
+[commit]
+  template = ~/.gitmessage
+
