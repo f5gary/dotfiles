@@ -1,4 +1,10 @@
 <History>
 	<Option Path="Options Import" DateChanged="20160216203601360" ChangeMethod="1">
 	</Option>
+	<Option Path="Application Options &gt; Notifications" DateChanged="20160223170714296" ChangeMethod="0">
+	</Option>
+	<Option Path="Tools &gt; Version Control &gt; Version Control Providers &gt; VCProvider=Git &gt; Show status on file icons" DateChanged="20160224002455763" ChangeMethod="0">
+	</Option>
+	<Option Path="Tools &gt; Version Control &gt; Version Control Setup" DateChanged="20160224002455763" ChangeMethod="0">
+	</Option>
 </History>
