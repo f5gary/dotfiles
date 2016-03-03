@@ -1,2 +1,112 @@
 <options>
+	<profile n="application.notifications.background" version="1">
+		<p n="enabled" v="0"/>
+		<p n="show_popups" v="0"/>
+	</profile>
+	<profile n="application.notifications.feature" version="1">
+		<p n="enabled" v="0"/>
+		<p n="show_popups" v="0"/>
+	</profile>
+	<profile n="application.notifications.feature.adaptive formatting" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.alias expansion" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.case keywords" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.close completion" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.close file" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.comment wrap" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.debugger" version="1">
+		<p n="method" v="4"/>
+	</profile>
+	<profile n="application.notifications.feature.display parameter information" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.doc comment expansion" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.dynamic surround" version="1">
+		<p n="method" v="4"/>
+	</profile>
+	<profile n="application.notifications.feature.insert matching parameters" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.insert right bracket" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.large file editing" version="1">
+		<p n="method" v="4"/>
+	</profile>
+	<profile n="application.notifications.feature.list compatible parameters" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.list compatible values" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.list members" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.symbol translation" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.syntax expansion" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.feature.xmlhtml formatting" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.context tagging" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.debugger" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.dtd error" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.file open error" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.http load error" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.memory" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.projects" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.schema error" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.tag file error" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.warning.tagging error" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.update.auto hot fix" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.update.update manager" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.debug listener.connected" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.debug listener.disconnected" version="1">
+		<p n="method" v="3"/>
+	</profile>
+	<profile n="application.notifications.debug listener.started" version="1">
+		<p n="method" v="3"/>
+	</profile>
 </options>
