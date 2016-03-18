@@ -67,6 +67,12 @@ if [ ! -h ~/.tigrc ]; then
   ln -sf ~/dotfiles/tigrc ~/.tigrc
 fi
 
+# Configure tmux
+echo Configuring TMUX
+if [ ! -h ~/.tmux.conf ]; then
+  ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
+fi
+
 # Configure slickedit
 echo Configuring SLICKEDIT
 if [ ! -h ~/.slickedit ]; then
