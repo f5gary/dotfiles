@@ -1,11 +1,35 @@
 #/bin/bash -x
 
+# Try to do some distro detection, etc.
+# DISTRO can be one of: fedora, redhat, or ubuntu
+# PKGTOOL can be one of: yum, dnf, or apt-get
+# PKGLIST is the list of package names used for the specific DISTRO
 if [ -f /etc/redhat-release ]; then
-  sudo yum install -y git tig tmux tree vim
+  grep -ic fedora /etc/redhat-release >/dev/null
+  if [ "$?" == "0" ]; then
+    # Fedora
+    DISTRO="fedora"
+  else
+    # Non-Fedora, assume they're all the same for now
+    DISTRO="redhat"
+  fi
+  PKGTOOL="yum"
+  which dnf >/dev/null 2>&1
+  if [ "$?" == "0" ]; then
+    PKGTOOL="dnf"
+  fi
+  PKGLIST="cmake ctags-etags golang nodejs npm python-devel"
 else
-  sudo apt-get update
-  sudo apt-get install -y git tig tmux tree vim
+  # Assume some flavor of ubuntu for now
+  DISTRO="ubuntu"
+  PKGTOOL="apt-get"
+  # Need to refresh packages for ubuntu
+  sudo ${PKGTOOL} update
+  PKGLIST="cmake exuberant-ctags golang-go nodejs npm python-dev"
 fi
+
+# Install base packages. No need (yet) for different names per distro.
+sudo ${PKGTOOL} install -y git tig tmux tree vim
 
 # Setup .bashrc
 grep -c DEBEMAIL ~/.bashrc >/dev/null
@@ -52,12 +76,14 @@ fi
 # Configure vim
 echo Configuring VIM
 # Install stuff to make YouCompleteMe happy
-if [ -f /etc/redhat-release ]; then
-  sudo yum install -y epel-release
-  sudo yum install -y cmake ctags-etags golang nodejs npm python-devel --enablerepo=epel
+if [ "${DISTRO}" == "redhat" ]; then
+  # need epel repo
+  sudo ${PKGTOOL} install -y epel-release
+  sudo ${PKGTOOL} install -y ${PKGLIST} --enablerepo=epel
 else
-  sudo apt-get install -y cmake exuberant-ctags golang-go nodejs npm python-dev
+  sudo ${PKGTOOL} install -y ${PKGLIST}
 fi
+
 if [ ! -h ~/.vimrc ]; then
   ln -sf ~/dotfiles/vimrc ~/.vimrc
 fi
