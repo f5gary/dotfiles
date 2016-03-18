@@ -1,4 +1,4 @@
-#/bin/bash -x
+#!/bin/bash -x
 
 # Try to do some distro detection, etc.
 # DISTRO can be one of: fedora, redhat, or ubuntu
