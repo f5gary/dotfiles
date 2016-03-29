@@ -31,6 +31,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-jp/vim-go-extra'
+Plugin 'ekalinin/Dockerfile.vim'
 
 call vundle#end()
 filetype plugin indent on
