@@ -56,11 +56,10 @@ if [ "$?" != "0" ]; then
   echo 'export GITAWAREPROMPT=~/.bash/git-aware-prompt' >> ~/.bashrc
   echo 'source "${GITAWAREPROMPT}/main.sh"' >> ~/.bashrc
 fi
-NEWPS1="\[\033[36m\][\[\033[m\]\[\033[36m\]\u@\h\[\033[m\] \[\033[32m\]\W\[\033[m\]\[\033[36m\]]\[\033[m\] \[\$txtcyn\]\$git_branch\[\$txtred\]\$git_dirty\[\$txtrst\]$ "
 grep -ce "^export PS1=.*git_branch.*" ~/.bashrc > /dev/null
 if [ "$?" != "0" ]; then
   # PS1 not set at all
-  echo "export PS1=\"${NEWPS1}\"" >> ~/.bashrc
+  echo "export PS1=\"\[\033[36m\][\[\033[m\]\[\033[36m\]\u@\h\[\033[m\] \[\033[32m\]\W\[\033[m\]\[\033[36m\]]\[\033[m\] \[\$txtcyn\]\\\$git_branch\[\$txtred\]\\\$git_dirty\[\$txtrst\]$ \"" >> ~/.bashrc
 fi
 grep -c bash_aliases ~/.bashrc >/dev/null
 if [ "$?" != "0" ]; then
