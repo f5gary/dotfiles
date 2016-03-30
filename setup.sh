@@ -54,6 +54,11 @@ if [ "$?" != "0" ]; then
   echo "  . ~/.bash_aliases" >> ~/.bashrc
   echo "fi" >> ~/.bashrc
 fi
+grep -c "alias ll='ls -l'" ~/.bashrc > /dev/null
+if [ "$?" != "0" ]; then
+  # Make sure any existing "alias ll" is my version
+  sed -i "s/^\s*\(alias ll\)=.*/\1='ls -l'/" ~/.bashrc
+fi
 
 # Setup symbolic links
 if [ ! -h ~/.bash_aliases ]; then
