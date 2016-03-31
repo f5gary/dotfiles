@@ -31,6 +31,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-jp/vim-go-extra'
+Plugin 'ekalinin/Dockerfile.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -43,6 +44,7 @@ noremap <leader>k :YcmCompleter GoToImplementation<CR>
 noremap <leader>j :YcmCompleter GoToReferences<CR>
 noremap <F4> :YcmDiags<CR>
 noremap <F5> :YcmForceCompileAndDiagnostics<CR>
+noremap <C-l> :noh<return><esc>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_open_loclist_on_ycm_diags = 1
