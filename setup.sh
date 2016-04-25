@@ -29,7 +29,7 @@ else
 fi
 
 # Install base packages. No need (yet) for different names per distro.
-sudo ${PKGTOOL} install -y git tig tmux tree vim
+sudo ${PKGTOOL} install -y git htop tig tmux tree vim
 
 # Install git-aware-prompt
 if [ ! -d ~/.bash ]; then
