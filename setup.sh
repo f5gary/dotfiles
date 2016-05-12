@@ -36,14 +36,14 @@ if [ -f /etc/redhat-release ]; then
   if [ "$?" == "0" ]; then
     PKGTOOL="dnf"
   fi
-  PKGLIST="cmake ctags-etags golang nodejs npm python-devel"
+  PKGLIST="cmake ctags-etags golang python-devel"
 else
   # Assume some flavor of ubuntu for now
   DISTRO="ubuntu"
   PKGTOOL="apt-get"
   # Need to refresh packages for ubuntu
   sudo ${PKGTOOL} update
-  PKGLIST="cmake exuberant-ctags golang-go nodejs npm python-dev"
+  PKGLIST="cmake exuberant-ctags golang-go python-dev"
 fi
 
 # Install base packages. No need (yet) for different names per distro.
