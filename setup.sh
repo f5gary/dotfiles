@@ -157,9 +157,9 @@ if [ ! -f ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so ]; then
   git submodule update --recursive
   CPUBITS=$(getconf LONG_BIT)
   if [ "${CPUBITS}" -eq 64 ]; then
-    ./install.py --clang-completer --gocode-completer --omnisharp-completer
+    ./install.py --clang-completer --gocode-completer
   else
-    ./install.py --clang-completer --gocode-completer --system-libclang --omnisharp-completer
+    ./install.py --clang-completer --gocode-completer --system-libclang
   fi
 fi
 
