@@ -12,3 +12,4 @@ slickedit/20.0.1/vunxdefs.e
 vim/bundle/
 vim/.netrwhist
 vim/.ycm_extra_conf.pyc
+vim/__pycache__/

@@ -2,6 +2,23 @@
 
 # Assume these packages are installed already
 #sudo ${PKGTOOL} install -y git tig tmux tree vim
+function ver_lt {
+  REGEX='([[:digit:]\.])+'
+  LHS=$1
+  [[ ${LHS} =~ ${REGEX} ]]
+  LHS_VER=${BASH_REMATCH[0]}
+  RHS=$2
+  [[ ${RHS} =~ ${REGEX} ]]
+  RHS_VER=${BASH_REMATCH[0]}
+  if [ "${LHS_VER}" == "${RHS_VER}" ]; then
+    return 0
+  fi
+  LOW_VER=$(echo -e "${LHS_VER}\n${RHS_VER}" | sort -V | head -n 1)
+  if [ "${LOW_VER}" == "${LHS_VER}" ]; then
+    return 1
+  fi
+  return 0
+}
 
 # Install git-aware-prompt
 if [ ! -d ~/.bash ]; then
@@ -60,7 +77,15 @@ fi
 # Configure tmux
 echo Configuring TMUX
 if [ ! -h ~/.tmux.conf ]; then
-  ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
+  TMUX_VER=$(tmux -V)
+  ver_lt "${TMUX_VER}" "2.1"
+  if [ $? -eq 1 ]; then
+    # Less than 2.1
+    ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
+  else
+    # Greater or equal to 2.1
+    ln -sf ~/dotfiles/tmux_2.1.conf ~/.tmux.conf
+  fi
 fi
 
 ## Configure slickedit
