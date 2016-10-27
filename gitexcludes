@@ -1,0 +1,6 @@
+# Ignore SlickEdit project files
+*.vpj
+*.vpw
+*.vpwhistu
+*.vtg
+

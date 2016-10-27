@@ -104,6 +104,9 @@ fi
 if [ ! -h ~/.gitmessage ]; then
   ln -sf ~/dotfiles/gitmessage ~/.gitmessage
 fi
+if [ ! -h ~/.gitexcludes ]; then
+  ln -sf ~/dotfiles/gitexcludes ~/.gitexcludes
+fi
 
 # Configure tig
 echo Configuring TIG
