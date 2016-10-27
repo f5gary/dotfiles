@@ -7,22 +7,22 @@
 #  excludesfile = "/home/garyr/.gitexcludes"
 
 [log]
-  decorate = true
+	decorate = true
 
 [merge]
-  conflictstyle = diff3
+	conflictstyle = diff3
 
 [push]
   default = simple
 
 [pull]
-  ff = only
+	ff = only
 
 [diff]
-  submodule = log
+	submodule = log
 
 [status]
-  submodulesummary = 1
+	submodulesummary = 1
 
 [color]
   branch = auto

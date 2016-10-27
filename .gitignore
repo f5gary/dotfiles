@@ -9,6 +9,11 @@ slickedit/20.0.1/perfile.xml
 slickedit/20.0.1/vslick.stu
 slickedit/20.0.1/vunxdata.e
 slickedit/20.0.1/vunxdefs.e
+slickedit/20.0.1/SampleProjects/
+slickedit/20.0.1/*.bak
+slickedit/20.0.1/*.ex
+slickedit/20.0.1/lastmac*
+slickedit/20.0.1/pipDB.dbs
 vim/bundle/
 vim/.netrwhist
 vim/.ycm_extra_conf.pyc

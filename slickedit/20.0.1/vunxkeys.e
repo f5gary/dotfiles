@@ -447,12 +447,6 @@ defeventtab pascal_keys;
 def  ' '= pascal_space;
 def  '('= auto_functionhelp_key;
 def  '.'= auto_codehelp_key;
-def  'D'= pascal_d;
-def  'N'= pascal_n;
-def  'Y'= pascal_y;
-def  'd'= pascal_d;
-def  'n'= pascal_n;
-def  'y'= pascal_y;
 def  'ENTER'= pascal_enter;
 
 defeventtab ext_keys;
@@ -634,13 +628,12 @@ def  '('= auto_functionhelp_key;
 def  '.'= auto_codehelp_key;
 def  ':'= python_colon;
 def  'ENTER'= python_enter;
-def  'TAB'= python_tab;
+def  'TAB'= smarttab;
 
 defeventtab ruby_keys;
 def  ' '= ruby_space;
 def  '('= auto_functionhelp_key;
 def  '.'= auto_codehelp_key;
-def  '['= ruby_bracket;
 def  '{'= ruby_begin;
 def  'ENTER'= ruby_enter;
 
@@ -908,7 +901,7 @@ def  ']'= html_gt;
 def  '{'= html_key;
 def  '}'= html_key;
 def  'ENTER'= html_enter;
-def  'TAB'= html_key;
+def  'TAB'= html_tab;
 
 #pragma option(redeclvars,on)
 #include 'slick.sh'
