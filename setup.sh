@@ -36,14 +36,14 @@ if [ -f /etc/redhat-release ]; then
   if [ "$?" == "0" ]; then
     PKGTOOL="dnf"
   fi
-  PKGLIST="cmake ctags-etags golang python-devel"
+  PKGLIST="clang cmake ctags-etags golang python-devel"
 else
   # Assume some flavor of ubuntu for now
   DISTRO="ubuntu"
   PKGTOOL="apt-get"
   # Need to refresh packages for ubuntu
   sudo ${PKGTOOL} update
-  PKGLIST="cmake exuberant-ctags golang-go python-dev"
+  PKGLIST="clang cmake exuberant-ctags golang-go python-dev"
 fi
 
 # Install base packages. No need (yet) for different names per distro.
@@ -158,11 +158,6 @@ fi
 if [ ! -f ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so ]; then
   cd ~/.vim/bundle/YouCompleteMe/
   git submodule update --recursive
-  CPUBITS=$(getconf LONG_BIT)
-  if [ "${CPUBITS}" -eq 64 ]; then
-    ./install.py --clang-completer --gocode-completer
-  else
-    ./install.py --clang-completer --gocode-completer --system-libclang
-  fi
+  ./install.py --clang-completer --gocode-completer --system-libclang
 fi
 
