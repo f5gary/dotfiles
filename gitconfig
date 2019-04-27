@@ -3,7 +3,7 @@
   email = gary@section.io
 
 [core]
-  editor = vim
+  editor = /Applications/MacVim.app/Contents/MacOS/Vim
   excludesFile = "~/.gitexcludes"
 
 [log]
