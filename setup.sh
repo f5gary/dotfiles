@@ -104,25 +104,20 @@ fi
 #else
 #  sudo ${PKGTOOL} install -y ${PKGLIST}
 #fi
-#
-#if [ ! -h ~/.vimrc ]; then
-#  ln -sf ~/dotfiles/vimrc ~/.vimrc
-#fi
-#if [ ! -h ~/.vim ]; then
-#  ln -sf ~/dotfiles/vim ~/.vim
-#fi
-#if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
-#  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-#  vim +PluginInstall +qall
-#fi
-#if [ ! -f ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so ]; then
-#  cd ~/.vim/bundle/YouCompleteMe/
-#  git submodule update --recursive
-#  CPUBITS=$(getconf LONG_BIT)
-#  if [ "${CPUBITS}" -eq 64 ]; then
-#    ./install.py --clang-completer --gocode-completer --arch 64
-#  else
-#    ./install.py --clang-completer --gocode-completer --system-libclang
-#  fi
-#fi
+
+if [ ! -h ~/.vimrc ]; then
+  ln -sf ~/dotfiles/vimrc ~/.vimrc
+fi
+if [ ! -h ~/.vim ]; then
+  ln -sf ~/dotfiles/vim ~/.vim
+fi
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+fi
+if [ ! -f ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so ]; then
+  cd ~/.vim/bundle/YouCompleteMe/
+  git submodule update --recursive
+  ./install.sh --clang-completer --go-completer --rust-completer --ts-completer
+fi
 
